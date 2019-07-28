@@ -1,6 +1,7 @@
 @import 'bootstrap-variables';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+@import 'variables';
 
 /* ==============================================================
 Bootstrap tweaks
@@ -12,6 +13,12 @@ h2,
 h3,
 h4 {
   font-weight: 300;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
 }
 
 a {
@@ -96,6 +103,41 @@ Generic styles
 .hand,
 [jhisortby] {
   cursor: pointer;
+}
+
+.card,
+.btn,
+.form-control {
+  border-radius: 2px;
+}
+
+.btn {
+  color: #fff;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+  margin-top: 10px;
+}
+
+.btn-color1 {
+  background-color: rgba($color: $color1, $alpha: 0.9);
+}
+
+.btn-color2 {
+  background-color: rgba($color: $color2, $alpha: 0.9);
+}
+
+.btn-color3 {
+  background-color: rgba($color: $color3, $alpha: 0.9);
+}
+
+.btn-color4 {
+  background-color: rgba($color: $color4, $alpha: 0.9);
+}
+
+.center {
+  margin: auto;
+  width: 50%;
 }
 
 /* ==========================================================================

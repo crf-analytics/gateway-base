@@ -1,5 +1,17 @@
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-8">
+        <h1 class="display-10" ><span jhiTranslate="home.title">Wellcome</span><span *ngIf="account"> {{account.login}}</span></h1>
+    </div>
+    <div class="col-md-4" *jhiHasAnyAuthority="'ROLE_USER'">
+        <div class="center" style="min-width: 170px">
+            <button type="button" class="btn btn-color3 btn-lg" >
+                <fa-icon icon="plus"></fa-icon>
+                <span jhiTranslate="global.cattle.addCattle">Add Cattle</span>
+            </button>
+        </div>
+        
+    </div>
+    <!-- <div class="col-md-3">
         <span class="hipster img-fluid rounded"></span>
     </div>
     <div class="col-md-9">
@@ -37,5 +49,5 @@
         <p>
             <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
         </p>
-    </div>
+    </div> -->
 </div>

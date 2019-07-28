@@ -34,6 +34,10 @@
       },
       "language": "Idioma"
     },
+    "cattle": {
+      "cattle": "Ganado",
+      "addCattle": "Agregar Ganado"
+    },
     "form": {
       "username.label": "Usuario",
       "username.placeholder": "Nombre de usuario",
@@ -85,7 +89,9 @@
       "id": "ID"
     },
     "ribbon": {
-      "dev": "Development"
+      "dev": "Development",
+      "qa": "QA",
+      "prod": "Beta"
     },
     "item-count": "Monstrando {{first}} - {{second}} de {{total}} elementos."
   },

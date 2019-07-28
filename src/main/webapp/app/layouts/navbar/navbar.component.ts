@@ -5,7 +5,7 @@ import { JhiLanguageService } from 'ng-jhipster';
 import { SessionStorageService } from 'ngx-webstorage';
 
 import { VERSION } from 'app/app.constants';
-import { JhiLanguageHelper, AccountService, LoginModalService, LoginService } from 'app/core';
+import { JhiLanguageHelper, AccountService, Account, LoginModalService, LoginService } from 'app/core';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 
 @Component({
@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
   swaggerEnabled: boolean;
   modalRef: NgbModalRef;
   version: string;
+  account: Account;
 
   constructor(
     private loginService: LoginService,
@@ -44,6 +45,10 @@ export class NavbarComponent implements OnInit {
       this.inProduction = profileInfo.inProduction;
       this.swaggerEnabled = profileInfo.swaggerEnabled;
     });
+
+    this.accountService.identity().then((account: Account) => {
+      this.account = account;
+    });
   }
 
   changeLanguage(languageKey: string) {
@@ -53,6 +58,22 @@ export class NavbarComponent implements OnInit {
 
   collapseNavbar() {
     this.isNavbarCollapsed = true;
+  }
+
+  isAdmin() {
+    return this.accountService.hasAnyAuthority(['ROLE_ADMIN']);
+    // return this.accountService.identity();
+    // return false;
+  }
+
+  isUser() {
+    return this.accountService.hasAnyAuthority(['ROLE_USER']);
+    // return this.accountService.identity();
+    // return false;
+  }
+
+  isAssociation() {
+    return this.accountService.hasAnyAuthority(['ROLE_ASSOCIATION']);
   }
 
   isAuthenticated() {
@@ -66,7 +87,7 @@ export class NavbarComponent implements OnInit {
   logout() {
     this.collapseNavbar();
     this.loginService.logout();
-    this.router.navigate(['']);
+    this.router.navigate(['/']);
   }
 
   toggleNavbar() {

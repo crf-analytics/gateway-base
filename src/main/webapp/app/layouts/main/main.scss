@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+/* ==========================================================================
+Main
+========================================================================== */
+
+// .container-fluid {
+//     padding-top:30px;
+// }
+
+.container-fluid {
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-left: 0px;
+  // position: relative;
+  // min-height: 100vh;
+}
+
+.card {
+  // padding-bottom: 2.5rem;    /* Footer height */
+}

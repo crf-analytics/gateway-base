@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webapp" />
     <link rel="stylesheet" href="content/css/loading.css">
+    <link rel="stylesheet" href="content/css/loading-cube.css">
+    <link rel="stylesheet" href="content/css/animation.css">
     <!-- jhipster-needle-add-resources-to-root - JHipster will add new resources here -->
 </head>
 <body>
@@ -19,14 +21,21 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <jhi-main>
-        <div class="app-loading">
+        <!-- <div class="app-loading">
             <div class="lds-css ng-scope">
-                <div class="lds-pacman">
+                <div class="lds-pacman">  
                     <div><div></div><div></div><div></div></div>
                     <div><div></div><div></div><div></div></div>
                 </div>
             </div>
+        </div> -->
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
         </div>
+        <!-- <div class="animation"></div> -->
         <div class="app-loading">
             <div id="jhipster-error" style="display:none">
                 <!-- This content is for troubleshooting purpose and will be removed when app renders -->

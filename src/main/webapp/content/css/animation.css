@@ -1,0 +1,13 @@
+.animation {
+  width: 160px;
+  height: 240px;
+  margin: 2% auto;
+  background: url('../images/cencerro-sprite.png') left center;
+  animation: play 0.5s steps(3) infinite;
+}
+
+@keyframes play {
+  100% {
+    background-position: -480px;
+  }
+}

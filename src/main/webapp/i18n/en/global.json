@@ -34,6 +34,10 @@
       },
       "language": "Language"
     },
+    "cattle": {
+      "cattle": "Cattle",
+      "addCattle": "Add Cattle"
+    },
     "form": {
       "username.label": "Username",
       "username.placeholder": "Your username",
@@ -85,7 +89,9 @@
       "id": "ID"
     },
     "ribbon": {
-      "dev": "Development"
+      "dev": "Development",
+      "qa": "QA",
+      "prod": "Beta"
     },
     "item-count": "Showing {{first}} - {{second}} of {{total}} items."
   },

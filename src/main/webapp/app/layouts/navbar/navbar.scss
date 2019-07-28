@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+@import '../../../content/scss/variables';
 
 /* ==========================================================================
 Navbar
@@ -15,8 +16,15 @@ Navbar
   width: 1.75em;
 }
 
+.account-menu {
+  left: -80px;
+}
+
 .navbar {
   padding: 0.2rem 1rem;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
 
   ul.navbar-nav {
     .nav-item {
@@ -29,14 +37,53 @@ Navbar
   }
 }
 
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.bg-user {
+  // background-color: rgba($color: #a0855b, $alpha: 0.8) !important;
+  background-color: rgba($color: #000000, $alpha: $alfa-color) !important;
+
+  // ul.dropdown-menu {
+  //   background-color: rgba($color: #000000, $alpha: $alfa-color) !important;
+  //   margin: .6em;
+  //   color: #fff;
+  // }
+}
+
+.bg-admin {
+  background-color: rgba($color: #930a0a, $alpha: $alfa-color) !important;
+}
+
+.bg-association {
+  background-color: rgba($color: #213aab, $alpha: $alfa-color) !important;
+}
+
+.bg-light {
+  background-color: rgba($color: #ffffff, $alpha: $alfa-color) !important;
+
+  a {
+    color: rgba($color: #000000, $alpha: 0.6) !important;
+  }
+}
+
 /* ==========================================================================
 Logo styles
 ========================================================================== */
 .logo-img {
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   display: inline-block;
   vertical-align: middle;
-  background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
+  background: url('../../../content/images/logo-cattlelog.png') no-repeat center center;
   background-size: contain;
 }
