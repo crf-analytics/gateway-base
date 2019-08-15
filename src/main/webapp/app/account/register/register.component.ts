@@ -7,6 +7,7 @@ import { JhiLanguageService } from 'ng-jhipster';
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared';
 import { LoginModalService } from 'app/core';
 import { Register } from './register.service';
+import { UserService } from '../../core/user/user.service';
 
 @Component({
   selector: 'jhi-register',
@@ -19,10 +20,12 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   errorUserExists: string;
   success: boolean;
   modalRef: NgbModalRef;
+  authorities: any[];
 
   registerForm = this.fb.group({
     login: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(50), Validators.pattern('^[_.@A-Za-z0-9-]*$')]],
     email: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(254), Validators.email]],
+    role: ['', [Validators.required]],
     password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
     confirmPassword: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]]
   });
@@ -30,6 +33,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   constructor(
     private languageService: JhiLanguageService,
     private loginModalService: LoginModalService,
+    private userService: UserService,
     private registerService: Register,
     private elementRef: ElementRef,
     private renderer: Renderer,
@@ -38,6 +42,10 @@ export class RegisterComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.success = false;
+
+    this.userService.authorities().subscribe(authorities => {
+      this.authorities = authorities;
+    });
   }
 
   ngAfterViewInit() {
@@ -48,11 +56,12 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     let registerAccount = {};
     const login = this.registerForm.get(['login']).value;
     const email = this.registerForm.get(['email']).value;
+    const role = this.registerForm.get(['role']).value;
     const password = this.registerForm.get(['password']).value;
     if (password !== this.registerForm.get(['confirmPassword']).value) {
       this.doNotMatch = 'ERROR';
     } else {
-      registerAccount = { ...registerAccount, login, email, password };
+      registerAccount = { ...registerAccount, login, email, role, password };
       this.doNotMatch = null;
       this.error = null;
       this.errorUserExists = null;

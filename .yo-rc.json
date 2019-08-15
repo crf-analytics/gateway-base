@@ -3,8 +3,8 @@
     "applicationType": "gateway",
     "gitCompany": "",
     "baseName": "Gateway",
-    "packageName": "io.crf.cattlelog.gateway",
-    "packageFolder": "io/crf/cattlelog/gateway",
+    "packageName": "io.crf.base.gateway",
+    "packageFolder": "io/crf/base/gateway",
     "serverPort": 8080,
     "serviceDiscoveryType": "eureka",
     "authenticationType": "jwt",
@@ -24,10 +24,7 @@
     "testFrameworks": [],
     "enableTranslation": true,
     "nativeLanguage": "es",
-    "languages": [
-      "en",
-      "es"
-    ],
+    "languages": ["en", "es"],
     "clientFramework": "angularX",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "6.1.2",

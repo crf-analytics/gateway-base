@@ -44,9 +44,9 @@ public class LoggingAspect {
     /**
      * Pointcut that matches all Spring beans in the application's main packages.
      */
-    @Pointcut("within(io.crf.cattlelog.gateway.repository..*)"+
-        " || within(io.crf.cattlelog.gateway.service..*)"+
-        " || within(io.crf.cattlelog.gateway.web.rest..*)")
+    @Pointcut("within(io.crf.base.gateway.repository..*)"+
+        " || within(io.crf.base.gateway.service..*)"+
+        " || within(io.crf.base.gateway.web.rest..*)")
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }

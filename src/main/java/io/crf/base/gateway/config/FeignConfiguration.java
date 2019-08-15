@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@EnableFeignClients(basePackages = "io.crf.cattlelog.gateway")
+@EnableFeignClients(basePackages = "io.crf.base.gateway")
 @Import(FeignClientsConfiguration.class)
 public class FeignConfiguration {
 

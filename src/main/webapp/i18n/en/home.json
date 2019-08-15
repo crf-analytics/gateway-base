@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "CattleLog",
+    "title": "Base",
     "subtitle": "The Cattle Log",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
