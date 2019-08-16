@@ -74,10 +74,10 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="role" jhiTranslate="global.form.role.label">Role</label>
-                    <select class="form-control" id="role" name="role" formControlName="role">
-                        <option *ngIf="!editForm.get('role').value" [ngValue]="null" selected></option>
-                        <option [ngValue]="roleOption.id === editForm.get('role').value?.id ? editForm.get('role').value : kindOption" *ngFor="let role of authorities; trackBy: trackRoleById">{{role.id}}</option>
+                    <label class="form-control-label" for="authority" jhiTranslate="global.form.role.label">Role</label>
+                    <select class="form-control" id="authority" name="authority" formControlName="authority">
+                        <option *ngIf="!registerForm.get('authority').value" [ngValue]="null" selected></option>
+                        <option [ngValue]="authority.id === registerForm.get('authority').value?.id ? registerForm.get('authority').value : authority.name" *ngFor="let authority of authorities; trackBy: trackAuthorityById" jhiTranslate="{{authority.langName}}">{{authority.displayName}}</option>
                     </select>
                 </div>
                 <div class="form-group">

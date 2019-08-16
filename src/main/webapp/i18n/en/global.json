@@ -48,7 +48,10 @@
       "confirmpassword.label": "New password confirmation",
       "confirmpassword.placeholder": "Confirm the new password",
       "email.label": "Email",
-      "email.placeholder": "Your email"
+      "email.placeholder": "Your email",
+      "role.label": "Role",
+      "role.option.ship": "Ship",
+      "role.option.prov": "Provider"
     },
     "messages": {
       "info": {

@@ -48,7 +48,10 @@
       "confirmpassword.label": "Confirmación de la nueva contraseña",
       "confirmpassword.placeholder": "Confirmación de la nueva contraseña",
       "email.label": "Correo electrónico",
-      "email.placeholder": "Su correo electrónico"
+      "email.placeholder": "Su correo electrónico",
+      "role.label": "Rol",
+      "role.option.ship": "Barco",
+      "role.option.prov": "Proveedor"
     },
     "messages": {
       "info": {
